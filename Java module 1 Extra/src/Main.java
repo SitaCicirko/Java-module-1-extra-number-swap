@@ -2,7 +2,7 @@ interface BeforeTheChange{
     int a = 5;
     int b = 7;
 }
-class AfterTheChange{
+class AfterTheChange implements BeforeTheChange{
     private int a = 5;
     private int b = 7;
     private int c;
@@ -16,12 +16,6 @@ class AfterTheChange{
         b = c;
         System.out.println("After the change a = " + a);
         System.out.println("After the change b = " + b);
-    }
-    public int getA(){
-        return a;
-    }
-    public int getB(){
-        return b;
     }
 
 }
